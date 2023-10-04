@@ -82,7 +82,7 @@ regd_users.delete("/auth/review/:isbn", (req, res) => {
               delete books[isbn].reviews[username]
               res.send(`Review for the book with ISBN ${isbn} posted by the user ${username} has been deleted.`);
           } else {
-              res.send(`Book review for book with ISBN ${isbn} for user ${username} has been deleted.`);
+              res.send(`Book review for book with ISBN ${isbn} for user ${username} not existing.`);
           }
       } else {
           res.send("Unable to find book!");
